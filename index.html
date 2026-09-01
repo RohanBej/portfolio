@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rohan Bej | Computer Science & Engineering Student</title>
+    <meta name="description"
+        content="Rohan Bej — Computer Science & Engineering student at Lovely Professional University. Explore skills, projects, training, and certifications." />
+    <meta property="og:title" content="Rohan Bej | CS&E Student Portfolio" />
+    <meta property="og:description"
+        content="Personal portfolio of Rohan Bej, a Computer Science & Engineering student at Lovely Professional University." />
+    <meta property="og:type" content="website" />
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Kalam:wght@400;700&family=Patrick+Hand&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <canvas id="bgCanvas" aria-hidden="true"></canvas>
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo" aria-label="Rohan Bej — Home">
+                <span class="logo-text">RB</span>
+            </a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span class="hamburger"></span>
+            </button>
+            <ul class="nav-menu" id="navMenu" role="menubar">
+                <li role="none"><a href="#hero" class="nav-link active" role="menuitem">Home</a></li>
+                <li role="none"><a href="#about" class="nav-link" role="menuitem">About</a></li>
+                <li role="none"><a href="#skills" class="nav-link" role="menuitem">Skills</a></li>
+                <li role="none"><a href="#projects" class="nav-link" role="menuitem">Projects</a></li>
+                <li role="none"><a href="#training" class="nav-link" role="menuitem">Training</a></li>
+                <li role="none"><a href="#certifications" class="nav-link" role="menuitem">Certifications</a></li>
+                <li role="none"><a href="#education" class="nav-link" role="menuitem">Education</a></li>
+                <li role="none"><a href="#contact" class="nav-link" role="menuitem">Contact</a></li>
+            </ul>
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light theme">
+                <svg class="theme-icon sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="5" />
+                    <line x1="12" y1="1" x2="12" y2="3" />
+                    <line x1="12" y1="21" x2="12" y2="23" />
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                    <line x1="1" y1="12" x2="3" y2="12" />
+                    <line x1="21" y1="12" x2="23" y2="12" />
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+                </svg>
+                <svg class="theme-icon moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <p class="hero-greeting animate-in">Hello, I'm</p>
+                <h1 class="hero-name animate-in">ROHAN BEJ</h1>
+                <p class="hero-title animate-in">Computer Science &amp; Engineering Student</p>
+                <p class="hero-university animate-in">Lovely Professional University</p>
+                <div class="hero-buttons animate-in">
+                    <a href="#projects" class="btn btn-primary">View Projects</a>
+                    <a href="https://drive.google.com/file/d/1hVDXx-LaImdJXCdPsaYDc8thlpCgzmrr/view?usp=drive_link"
+                        target="_blank" rel="noopener noreferrer" class="btn btn-outline" id="resumeBtn"
+                        title="Download Resume">Resume</a>
+                    <a href="#contact" class="btn btn-ghost">Contact</a>
+                </div>
+            </div>
+            <div class="hero-visual" aria-hidden="true">
+                <canvas id="heroCanvas"></canvas>
+            </div>
+        </div>
+        <div class="hero-scroll-indicator" aria-hidden="true">
+            <span>Scroll</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about">
+        <div class="container">
+            <h2 class="section-title animate-in">About Me</h2>
+            <div class="about-grid">
+                <div class="about-visual animate-in">
+                    <img src="1788236468116.png" alt="Rohan Bej" class="about-image" />
+                </div>
+                <div class="about-info animate-in">
+                    <h3>Rohan Bej</h3>
+                    <p class="about-degree">Computer Science &amp; Engineering</p>
+                    <p class="about-college">Lovely Professional University</p>
+                    <div class="about-details">
+                        <div class="about-detail-item">
+                            <span class="detail-label">Email</span>
+                            <a href="mailto:rohanbej123@gmail.com" class="detail-value">rohanbej123@gmail.com</a>
+                        </div>
+                        <div class="about-detail-item">
+                            <span class="detail-label">Phone</span>
+                            <a href="tel:+919661478727" class="detail-value">+91-9661478727</a>
+                        </div>
+                        <div class="about-detail-item">
+                            <span class="detail-label">LinkedIn</span>
+                            <a href="https://www.linkedin.com/in/rohan-bej-484528396/" target="_blank"
+                                rel="noopener noreferrer" class="detail-value">rohan-bej</a>
+                        </div>
+                        <div class="about-detail-item">
+                            <span class="detail-label">GitHub</span>
+                            <a href="https://github.com/RohanBej" target="_blank" rel="noopener noreferrer"
+                                class="detail-value">RohanBej</a>
+                        </div>
+                    </div>
+                    <div class="about-bio">
+                        <p>I am Rohan Bej, a passionate student and technology enthusiast with a strong interest in
+                            innovation, creativity, and continuous learning. I enjoy working on projects related to
+                            electronics, coding, web development, and engineering problem-solving.</p>
+                        <p>With an academic foundation covering Physics, Mathematics, Engineering Drawing, and Python
+                            Programming, I bring a structured analytical mindset to every project I undertake.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section skills">
+        <div class="container">
+            <h2 class="section-title animate-in">Skills &amp; Technologies</h2>
+            <p class="section-subtitle animate-in">A structured overview of my technical and interpersonal skillset.</p>
+
+            <div class="skills-filter animate-in" role="tablist" aria-label="Filter skills by category">
+                <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">All</button>
+                <button class="filter-btn" data-filter="languages" role="tab" aria-selected="false">Languages</button>
+                <button class="filter-btn" data-filter="technologies" role="tab"
+                    aria-selected="false">Technologies</button>
+                <button class="filter-btn" data-filter="databases" role="tab" aria-selected="false">Databases /
+                    Tools</button>
+                <button class="filter-btn" data-filter="soft" role="tab" aria-selected="false">Soft Skills</button>
+            </div>
+
+            <div class="skills-grid" id="skillsGrid">
+                <!-- Languages -->
+                <div class="skill-card animate-in" data-category="languages">
+                    <div class="skill-icon">☕</div><span class="skill-name">Java</span>
+                </div>
+                <div class="skill-card animate-in" data-category="languages">
+                    <div class="skill-icon">⚡</div><span class="skill-name">JavaScript</span>
+                </div>
+                <div class="skill-card animate-in" data-category="languages">
+                    <div class="skill-icon">⚙️</div><span class="skill-name">C</span>
+                </div>
+                <div class="skill-card animate-in" data-category="languages">
+                    <div class="skill-icon">🔧</div><span class="skill-name">C++</span>
+                </div>
+                <div class="skill-card animate-in" data-category="languages">
+                    <div class="skill-icon">�</div><span class="skill-name">Python</span>
+                </div>
+                <!-- Technologies -->
+                <div class="skill-card animate-in" data-category="technologies">
+                    <div class="skill-icon">🌐</div><span class="skill-name">HTML</span>
+                </div>
+                <div class="skill-card animate-in" data-category="technologies">
+                    <div class="skill-icon">🎨</div><span class="skill-name">CSS</span>
+                </div>
+                <div class="skill-card animate-in" data-category="technologies">
+                    <div class="skill-icon">💚</div><span class="skill-name">Node.js</span>
+                </div>
+                <!-- Databases / Tools -->
+                <div class="skill-card animate-in" data-category="databases">
+                    <div class="skill-icon">🐬</div><span class="skill-name">MySQL</span>
+                </div>
+                <div class="skill-card animate-in" data-category="databases">
+                    <div class="skill-icon">📦</div><span class="skill-name">Git</span>
+                </div>
+                <div class="skill-card animate-in" data-category="databases">
+                    <div class="skill-icon">🐙</div><span class="skill-name">GitHub</span>
+                </div>
+                <div class="skill-card animate-in" data-category="databases">
+                    <div class="skill-icon">✏️</div><span class="skill-name">Figma</span>
+                </div>
+                <!-- Soft Skills -->
+                <div class="skill-card animate-in" data-category="soft">
+                    <div class="skill-icon">🧩</div><span class="skill-name">Problem Solving</span>
+                </div>
+                <div class="skill-card animate-in" data-category="soft">
+                    <div class="skill-icon">🤝</div><span class="skill-name">Team Collaboration</span>
+                </div>
+                <div class="skill-card animate-in" data-category="soft">
+                    <div class="skill-icon">⏰</div><span class="skill-name">Time Management</span>
+                </div>
+                <div class="skill-card animate-in" data-category="soft">
+                    <div class="skill-icon">🔄</div><span class="skill-name">Adaptability</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section projects">
+        <div class="container">
+            <h2 class="section-title animate-in">Projects</h2>
+            <p class="section-subtitle animate-in">From real-time platforms to AI-powered tools — each project reflects
+                applied learning.</p>
+
+            <div class="project-filters animate-in" role="tablist" aria-label="Filter projects">
+                <button class="filter-btn active" data-pfilter="all" role="tab">All</button>
+                <button class="filter-btn" data-pfilter="react" role="tab">React</button>
+                <button class="filter-btn" data-pfilter="fullstack" role="tab">Full-Stack</button>
+            </div>
+
+            <div class="projects-grid" id="projectsGrid">
+                <!-- Project 1: AgriSarthi -->
+                <article class="project-card animate-in" data-tags="react,fullstack">
+                    <div class="project-bg-layer"
+                        style="background-image: url('https://olimpum.com/en/wp-content/uploads/WhatsApp-Image-2024-09-20-at-00.22.46.jpeg');">
+                    </div>
+                    <div class="project-content-overlay">
+                        <div class="project-header">
+                            <div class="project-icon">🌱</div>
+                            <span class="project-date">2025</span>
+                        </div>
+                        <h3 class="project-title">AgriSarthi — Plant Disease Checker</h3>
+                        <p class="project-desc">AI-powered plant disease detection tool that analyzes leaf images to
+                            identify diseases and suggest remedies — helping farmers protect crops with smart
+                            technology.
+                        </p>
+                        <div class="project-metrics">
+                            <div class="metric"><span class="metric-value">AI</span><span
+                                    class="metric-label">Powered</span></div>
+                            <div class="metric"><span class="metric-value">Image</span><span
+                                    class="metric-label">Analysis</span></div>
+                            <div class="metric"><span class="metric-value">React</span><span
+                                    class="metric-label">Frontend</span></div>
+                        </div>
+                        <div class="project-tags">
+                            <span class="tag">React</span><span class="tag">AI/ML</span><span class="tag">Vite</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://agrisarthiaiapplicationbuildcommuni.vercel.app/" target="_blank"
+                                rel="noopener noreferrer" class="btn btn-sm btn-primary">🚀 Live Demo</a>
+                        </div>
+                        <div class="project-expanded">
+                            <h4>Architecture Overview</h4>
+                            <div class="architecture-diagram">
+                                <div class="arch-node">React (Vite)</div>
+                                <div class="arch-arrow">↔</div>
+                                <div class="arch-node">AI Model</div>
+                                <div class="arch-arrow">→</div>
+                                <div class="arch-node accent">Disease Detection</div>
+                            </div>
+                            <ul class="project-features">
+                                <li>Upload leaf images for analysis</li>
+                                <li>AI-based disease identification</li>
+                                <li>Suggested remedies and treatments</li>
+                                <li>Community-focused design for farmers</li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Training Section -->
+    <section id="training" class="section training">
+        <div class="container">
+            <h2 class="section-title animate-in">Training</h2>
+            <p class="section-subtitle animate-in">Hands-on experience through structured programs.</p>
+
+            <!-- Training 1: Python Workshop -->
+            <div class="training-card animate-in">
+                <div class="training-header">
+                    <h3>Summer Training – Python Workshop</h3>
+                    <span class="training-date">Jun 10 – Aug 5</span>
+                </div>
+                <p class="training-institution">Lovely Professional University — Summer Training</p>
+                <p class="training-role">Python Programming Trainee</p>
+                <p class="training-desc">Comprehensive summer training on Python programming covering core concepts,
+                    data structures, algorithms, file handling, and project development. Hands-on lab sessions with
+                    real-world coding exercises and collaborative problem-solving.</p>
+
+                <div class="training-timeline">
+                    <div class="timeline-step completed">
+                        <div class="step-dot"></div>
+                        <div class="step-content">
+                            <h4>Fundamentals</h4>
+                            <p>Syntax, data types &amp; control flow</p>
+                        </div>
+                    </div>
+                    <div class="timeline-connector"></div>
+                    <div class="timeline-step completed">
+                        <div class="step-dot"></div>
+                        <div class="step-content">
+                            <h4>Data Structures</h4>
+                            <p>Lists, dicts, sets &amp; algorithms</p>
+                        </div>
+                    </div>
+                    <div class="timeline-connector"></div>
+                    <div class="timeline-step completed">
+                        <div class="step-dot"></div>
+                        <div class="step-content">
+                            <h4>OOP</h4>
+                            <p>Classes, inheritance &amp; modules</p>
+                        </div>
+                    </div>
+                    <div class="timeline-connector"></div>
+                    <div class="timeline-step completed">
+                        <div class="step-dot"></div>
+                        <div class="step-content">
+                            <h4>File I/O</h4>
+                            <p>File handling &amp; data processing</p>
+                        </div>
+                    </div>
+                    <div class="timeline-connector"></div>
+                    <div class="timeline-step completed">
+                        <div class="step-dot"></div>
+                        <div class="step-content">
+                            <h4>Projects</h4>
+                            <p>Capstone projects &amp; evaluation</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="section certifications">
+        <div class="container">
+            <h2 class="section-title animate-in">Certifications</h2>
+            <p class="section-subtitle animate-in">Professional certifications and course completions.</p>
+
+            <div class="certs-grid" id="certsGrid">
+                <!-- Cert 1: Infosys AI -->
+                <div class="cert-card animate-in">
+                    <div class="cert-image-wrap">
+                        <iframe src="https://drive.google.com/file/d/10pmFYvqka8EjPmSFHdfdbe9YSMPlC92q/preview"
+                            class="cert-preview" loading="lazy" title="Infosys Springboard AI Certificate"></iframe>
+                    </div>
+                    <div class="cert-info">
+                        <h3>Infosys Springboard — AI Certification</h3>
+                        <p class="cert-platform">Infosys Springboard</p>
+                        <p class="cert-date">Certificate on file</p>
+                        <a href="https://drive.google.com/file/d/10pmFYvqka8EjPmSFHdfdbe9YSMPlC92q/view" target="_blank"
+                            rel="noopener noreferrer" class="cert-link">View Certificate ↗</a>
+                    </div>
+                </div>
+                <!-- Cert 2: CSE101 NeoColab -->
+                <div class="cert-card animate-in">
+                    <div class="cert-image-wrap">
+                        <iframe src="https://drive.google.com/file/d/1jCJOuPslY_gyEjiz2IF1upH1GYb8-jUZ/preview"
+                            class="cert-preview" loading="lazy" title="CSE101 E-Certificate NeoColab"></iframe>
+                    </div>
+                    <div class="cert-info">
+                        <h3>CSE101 — E-Certificate</h3>
+                        <p class="cert-platform">NeoColab</p>
+                        <p class="cert-date">Certificate on file</p>
+                        <a href="https://drive.google.com/file/d/1jCJOuPslY_gyEjiz2IF1upH1GYb8-jUZ/view" target="_blank"
+                            rel="noopener noreferrer" class="cert-link">View Certificate ↗</a>
+                    </div>
+                </div>
+                <!-- Cert 3: Python Certificate -->
+                <div class="cert-card animate-in">
+                    <div class="cert-image-wrap">
+                        <iframe src="https://drive.google.com/file/d/1Qdve4q2R2dXkWT5HnaQj4mTr_y3FINaZ/preview"
+                            class="cert-preview" loading="lazy" title="Python Programming Certificate"></iframe>
+                    </div>
+                    <div class="cert-info">
+                        <h3>Python Programming Certificate</h3>
+                        <p class="cert-platform">GeeksForGeeks</p>
+                        <p class="cert-date">Certificate on file</p>
+                        <a href="https://drive.google.com/file/d/1Qdve4q2R2dXkWT5HnaQj4mTr_y3FINaZ/view" target="_blank"
+                            rel="noopener noreferrer" class="cert-link">View Certificate ↗</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="section education">
+        <div class="container">
+            <h2 class="section-title animate-in">Education</h2>
+
+            <div class="education-grid">
+                <div class="edu-card animate-in">
+                    <div class="project-bg-layer"
+                        style="background-image: url('https://www.vidyavision.com/CollegeUploads/Photos/2025-25-8-16-12-14_LPU7.jpg'); opacity: 0.25;">
+                    </div>
+                    <div class="project-content-overlay">
+                        <div class="edu-icon">🎓</div>
+                        <h3>Lovely Professional University</h3>
+                        <p class="edu-degree">Bachelor of Technology — Computer Science &amp; Engineering</p>
+                        <div class="edu-details">
+                            <div class="edu-detail">
+                                <span class="detail-label">CGPA</span>
+                                <span class="detail-value" style="color: #ff0000;">8.56</span>
+                            </div>
+                            <div class="edu-detail">
+                                <span class="detail-label">Duration</span>
+                                <span class="detail-value" style="color: #ff0000;">2025 - 2029</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact">
+        <div class="container">
+            <h2 class="section-title animate-in">Let's Connect</h2>
+            <p class="section-subtitle animate-in">Feel free to reach out for collaborations, projects, or just a tech
+                conversation.</p>
+
+            <div class="contact-grid">
+                <div class="contact-info animate-in">
+                    <a href="mailto:rohanbej123@gmail.com" class="contact-item">
+                        <div class="contact-icon">✉️</div>
+                        <div>
+                            <h4>Email</h4>
+                            <p>rohanbej123@gmail.com</p>
+                        </div>
+                    </a>
+                    <a href="tel:+919661478727" class="contact-item">
+                        <div class="contact-icon">📱</div>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>+91-9661478727</p>
+                        </div>
+                    </a>
+                    <a href="https://www.linkedin.com/in/rohan-bej-484528396/" target="_blank" rel="noopener noreferrer"
+                        class="contact-item">
+                        <div class="contact-icon">💼</div>
+                        <div>
+                            <h4>LinkedIn</h4>
+                            <p>rohan-bej</p>
+                        </div>
+                    </a>
+                    <a href="https://github.com/RohanBej" target="_blank" rel="noopener noreferrer"
+                        class="contact-item">
+                        <div class="contact-icon">🐙</div>
+                        <div>
+                            <h4>GitHub</h4>
+                            <p>RohanBej</p>
+                        </div>
+                    </a>
+                </div>
+
+                <form class="contact-form animate-in" id="contactForm" novalidate>
+                    <div class="form-group">
+                        <label for="formName">Name</label>
+                        <input type="text" id="formName" name="name" placeholder="Your name" required
+                            autocomplete="name" />
+                    </div>
+                    <div class="form-group">
+                        <label for="formEmail">Email</label>
+                        <input type="email" id="formEmail" name="email" placeholder="your@email.com" required
+                            autocomplete="email" />
+                    </div>
+                    <div class="form-group">
+                        <label for="formSubject">Subject</label>
+                        <input type="text" id="formSubject" name="subject" placeholder="Subject" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="formMessage">Message</label>
+                        <textarea id="formMessage" name="message" rows="5" placeholder="Your message..."
+                            required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>ROHAN BEJ</h3>
+                    <p>Lovely Professional University</p>
+                </div>
+                <div class="footer-links">
+                    <a href="https://www.linkedin.com/in/rohan-bej-484528396/" target="_blank" rel="noopener noreferrer"
+                        class="footer-link">LinkedIn</a>
+                    <a href="https://github.com/RohanBej" target="_blank" rel="noopener noreferrer"
+                        class="footer-link">GitHub</a>
+                    <a href="mailto:rohanbej123@gmail.com" class="footer-link">rohanbej123@gmail.com</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Rohan Bej. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
